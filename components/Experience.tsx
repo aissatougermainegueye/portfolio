@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { MapPin } from "lucide-react";
 import { useApp } from "./Providers";
+import { withBase } from "@/lib/basePath";
 
 export default function Experience() {
   const { t } = useApp();
@@ -115,7 +116,7 @@ function CompanyLogo({
     <div className="relative h-12 w-12 md:h-14 md:w-14 rounded-xl overflow-hidden border border-ink/[0.08] bg-white shadow-sm dark:border-white/[0.08] dark:bg-white/95">
       {showImage ? (
         <Image
-          src={src}
+          src={withBase(src!)}
           alt={`${company} logo`}
           fill
           sizes="56px"

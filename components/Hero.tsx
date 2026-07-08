@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Mail, ArrowRight } from "lucide-react";
 import { useApp } from "./Providers";
+import { withBase } from "@/lib/basePath";
 
 export default function Hero() {
   const { t } = useApp();
@@ -66,7 +67,7 @@ export default function Hero() {
           <div className="relative overflow-hidden rounded-2xl border border-ink/[0.08] shadow-card dark:border-white/[0.08]">
             <div className="relative aspect-[4/5]">
               <Image
-                src="/photo.jpeg"
+                src={withBase("/photo.jpeg")}
                 alt={`${t.common.firstName} ${t.common.lastName}`}
                 fill
                 priority

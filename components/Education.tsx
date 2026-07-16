@@ -1,6 +1,5 @@
 "use client";
 
-import { MapPin } from "lucide-react";
 import { useApp } from "./Providers";
 
 export default function Education() {
@@ -9,40 +8,48 @@ export default function Education() {
   return (
     <section id="education" className="section surface-base">
       <div className="container-page">
-        <div className="max-w-3xl">
-          <p className="section-kicker">{t.education.kicker}</p>
-          <h2 className="section-title">{t.education.title}</h2>
-          <p className="section-lead">{t.education.lead}</p>
-        </div>
+        <div className="grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
+          <div className="md:pt-2">
+            <span className="eyebrow">{t.education.kicker}</span>
+          </div>
+          <div>
+            <h2 className="section-title">{t.education.title}</h2>
 
-        <div className="mt-14 grid md:grid-cols-2 gap-5">
-          {t.education.items.map((ed) => (
-            <article
-              key={ed.degree + ed.period}
-              className="card card-hover group"
-            >
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-subtle dark:text-slate-500">
-                {ed.period}
-              </p>
-              <h3 className="mt-3 font-display text-lg md:text-xl font-medium text-ink text-balance dark:text-slate-100">
-                {ed.degree}
-              </h3>
-              <p className="mt-2 text-sm font-medium text-gold-dark dark:text-gold-light">
-                {ed.school}
-              </p>
-              <p className="mt-1 text-sm text-ink-muted flex items-center gap-1.5 dark:text-slate-400">
-                <MapPin className="h-3.5 w-3.5" />
-                {ed.location}
-              </p>
-              {ed.description && (
-                <p className="mt-4 text-sm text-ink-soft leading-relaxed dark:text-slate-300">
-                  {ed.description}
-                </p>
-              )}
-            </article>
-          ))}
+            <ul className="mt-14 divide-y divide-ink/[0.08] dark:divide-white/[0.08]">
+              {t.education.items.map((ed) => (
+                <li
+                  key={ed.degree + ed.period}
+                  className="grid md:grid-cols-[140px_1fr] gap-3 md:gap-10 py-8"
+                >
+                  <p className="text-sm font-medium text-ink dark:text-slate-200 md:pt-1">
+                    {ed.period}
+                  </p>
+                  <div>
+                    <h3 className="font-display text-xl md:text-2xl font-normal tracking-tight text-ink text-balance dark:text-slate-100">
+                      {ed.degree}
+                    </h3>
+                    <p className="mt-1.5 text-sm text-ink-muted dark:text-slate-400">
+                      <span className="text-ink dark:text-slate-200">
+                        {ed.school}
+                      </span>
+                      <span className="mx-2 text-ink-subtle dark:text-slate-600">
+                        —
+                      </span>
+                      {ed.location}
+                    </p>
+                    {ed.description && (
+                      <p className="mt-3 text-ink-soft dark:text-slate-300 max-w-2xl">
+                        {ed.description}
+                      </p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+

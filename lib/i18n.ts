@@ -143,7 +143,7 @@ const fr: Dict = {
     cta_journey: "Voir le parcours",
   },
   about: {
-    kicker: "1 - À propos",
+    kicker: "À propos",
     title_pre: "Ingénieure informatique",
     title_accent: "",
     title_post: "",
@@ -176,7 +176,7 @@ const fr: Dict = {
     ],
   },
   experience: {
-    kicker: "2 - Parcours",
+    kicker: "Parcours",
     title: "Expériences professionnelles",
     lead: "",
     current_badge: "En poste",
@@ -281,7 +281,7 @@ const fr: Dict = {
     ],
   },
   education: {
-    kicker: "3 - Formations",
+    kicker: "Formations",
     title: "Cursus académique",
     lead: "",
     items: [
@@ -319,7 +319,7 @@ const fr: Dict = {
     ],
   },
   skills: {
-    kicker: "4 - Stack technique",
+    kicker: "Stack technique",
     title: "Compétences",
     lead: "",
     groups: [
@@ -341,7 +341,7 @@ const fr: Dict = {
     ],
   },
   contact: {
-    kicker: "5 - Contact",
+    kicker: "Contact",
     title_pre: "",
     title_accent: "Prenons contact",
     title_post: ".",
@@ -397,7 +397,7 @@ const en: Dict = {
     cta_journey: "See the journey",
   },
   about: {
-    kicker: "1 - About",
+    kicker: "About",
     title_pre: "A",
     title_accent: "Computer Science Engineer",
     title_post: "",
@@ -430,7 +430,7 @@ const en: Dict = {
     ],
   },
   experience: {
-    kicker: "2 - Career",
+    kicker: "Career",
     title: "Professional experience",
     lead: "",
     current_badge: "Current",
@@ -523,7 +523,7 @@ const en: Dict = {
     ],
   },
   education: {
-    kicker: "3 - Education",
+    kicker: "Education",
     title: "Academic background",
     lead: "",
     items: [
@@ -560,7 +560,7 @@ const en: Dict = {
     ],
   },
   skills: {
-    kicker: "4 - Tech stack",
+    kicker: "Tech stack",
     title: "Hard Skills",
     lead: "",
     groups: [
@@ -582,7 +582,7 @@ const en: Dict = {
     ],
   },
   contact: {
-    kicker: "5 - Contact",
+    kicker: "Contact",
     title_pre: "",
     title_accent: "Let's connect",
     title_post: ".",

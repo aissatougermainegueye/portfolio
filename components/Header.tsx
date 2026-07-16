@@ -39,10 +39,7 @@ export default function Header() {
           href="#top"
           className="font-display text-base md:text-lg font-medium tracking-tight text-ink dark:text-slate-100"
         >
-          {t.common.firstName}{" "}
-          <span className="text-gold-dark dark:text-gold-light">
-            {t.common.lastName}
-          </span>
+          {t.common.firstName} {t.common.lastName}
         </a>
 
         <ul className="hidden lg:flex items-center gap-7">

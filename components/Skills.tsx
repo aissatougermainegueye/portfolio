@@ -1,7 +1,7 @@
 "use client";
 
-import { techStack } from "@/lib/data";
 import { useApp } from "./Providers";
+import { techStack, type TechGroupKind } from "@/lib/data";
 
 export default function Skills() {
   const { t } = useApp();
@@ -9,38 +9,29 @@ export default function Skills() {
   return (
     <section id="skills" className="section surface-base">
       <div className="container-page">
-        <div className="rule-double" aria-hidden />
-        <div className="flex items-baseline gap-6 py-4">
-          <span className="section-number">IV</span>
-          <span className="eyebrow smallcaps">{t.skills.kicker}</span>
-        </div>
-        <div className="rule" aria-hidden />
+        <SectionHead cmd="cat stack.txt" kicker={t.skills.kicker} />
 
-        <div className="mt-16 grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
+        <div className="mt-12 grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
           <div />
           <div>
             <h2 className="section-title">{t.skills.title}</h2>
 
-            <div className="mt-14 space-y-10">
-              {t.skills.groups.map((g, i) => {
-                const items = techStack[g.kind];
+            <div className="mt-10 space-y-10">
+              {t.skills.groups.map((g) => {
+                const items = techStack[g.kind as TechGroupKind];
                 return (
                   <div
                     key={g.kind}
-                    className="grid md:grid-cols-[180px_1fr] gap-4 md:gap-10 border-t border-ink/[0.12] pt-8 dark:border-white/[0.12]"
+                    className="border-t border-dashed border-ink/[0.18] pt-6 first:border-t-0 first:pt-0 dark:border-white/[0.18]"
                   >
-                    <div>
-                      <p className="font-display italic text-ink-muted text-sm dark:text-slate-400">
-                        N°0{i + 1}
-                      </p>
-                      <h3 className="mt-1 font-display text-xl font-normal text-ink dark:text-slate-100">
-                        {g.title}
-                      </h3>
-                      <p className="mt-1 text-xs italic text-ink-muted dark:text-slate-500">
-                        {g.subtitle}
-                      </p>
-                    </div>
-                    <p className="text-ink-soft leading-[1.9] text-[17px] dark:text-slate-300">
+                    <p className="cmt text-xs">{g.subtitle}</p>
+                    <h3 className="mt-1 font-display text-xl md:text-2xl font-normal tracking-tight text-ink dark:text-slate-100">
+                      {g.title}
+                    </h3>
+                    <p className="mt-4 mono text-sm text-ink-soft leading-[1.9] dark:text-slate-300">
+                      <span className="text-gold-dark/70 dark:text-gold-light/70">
+                        ${" "}
+                      </span>
                       {items.join(" · ")}
                     </p>
                   </div>
@@ -54,4 +45,12 @@ export default function Skills() {
   );
 }
 
-
+function SectionHead({ cmd, kicker }: { cmd: string; kicker: string }) {
+  return (
+    <div>
+      <p className="prompt text-ink-soft dark:text-slate-300">{cmd}</p>
+      <p className="cmt mt-1 text-xs">{kicker}</p>
+      <div className="mt-4 rule-dashed" aria-hidden />
+    </div>
+  );
+}

@@ -4,9 +4,9 @@ Dépose ici les logos des entreprises. Formats acceptés : SVG (recommandé), PN
 
 Fichiers attendus (nommage exact) :
 
-- `technipfmc.svg` — TechnipFMC
-- `covea.svg` — Covéa
-- `mma.svg` — MMA
+- `technipfmc.svg` - TechnipFMC
+- `covea.svg` - Covéa
+- `mma.svg` - MMA
 
 Si un fichier est absent, le portfolio affiche automatiquement les initiales à la place (ex. « TS » pour TechnipFMC Subsea France, « C » pour Covéa, « M » pour MMA).
 

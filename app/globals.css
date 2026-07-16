@@ -9,7 +9,7 @@ html {
 body {
   background: #ffffff;
   color: #0f172a;
-  font-feature-settings: "kern", "liga", "ss01";
+  font-feature-settings: "kern", "liga";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 200ms ease, color 200ms ease;
@@ -26,68 +26,81 @@ html.dark body {
   }
 
   .section {
-    @apply py-24 md:py-32;
+    @apply py-20 md:py-28;
   }
 
-  .eyebrow {
-    @apply inline-block text-[11px] font-medium uppercase tracking-[0.22em] text-ink-muted dark:text-slate-400;
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+      "Liberation Mono", monospace;
+    font-feature-settings: "calt" 0;
+  }
+
+  .prompt {
+    @apply mono text-sm;
+  }
+
+  .prompt::before {
+    content: "$ ";
+    @apply text-gold-dark dark:text-gold-light font-medium;
+  }
+
+  .cmt {
+    @apply mono text-ink-muted dark:text-slate-500;
+  }
+
+  .cmt::before {
+    content: "// ";
+  }
+
+  .tag {
+    @apply mono text-ink-muted dark:text-slate-400;
   }
 
   .section-title {
-    @apply font-display text-4xl md:text-6xl font-normal tracking-tight text-ink dark:text-slate-50;
+    @apply font-display text-3xl md:text-5xl font-normal tracking-tight text-ink dark:text-slate-50;
     letter-spacing: -0.02em;
   }
 
   .section-lead {
-    @apply mt-6 max-w-2xl text-ink-muted text-base md:text-lg dark:text-slate-400;
-  }
-
-  .section-number {
-    @apply font-display text-[5rem] md:text-[7rem] leading-none italic font-normal text-ink/[0.08] dark:text-white/[0.08] select-none;
-    letter-spacing: -0.04em;
+    @apply mt-4 max-w-2xl text-ink-muted text-base md:text-lg dark:text-slate-400;
   }
 
   .rule {
     @apply block h-px w-full bg-ink/[0.12] dark:bg-white/[0.12];
   }
 
-  .rule-double {
-    @apply relative w-full;
-    height: 5px;
-    background-image: linear-gradient(currentColor, currentColor),
-      linear-gradient(currentColor, currentColor);
-    background-size: 100% 1px, 100% 1px;
-    background-position: 0 0, 0 100%;
-    background-repeat: no-repeat;
-    color: rgb(15 23 42 / 0.35);
+  .rule-dashed {
+    @apply block w-full;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      to right,
+      currentColor 0,
+      currentColor 4px,
+      transparent 4px,
+      transparent 8px
+    );
+    color: rgb(15 23 42 / 0.25);
   }
 
-  .dark .rule-double {
-    color: rgb(255 255 255 / 0.3);
+  .dark .rule-dashed {
+    color: rgb(255 255 255 / 0.22);
   }
 
-  .dropcap::first-letter {
-    @apply font-display float-left italic text-gold-dark dark:text-gold-light;
-    font-size: 4.5rem;
-    line-height: 0.9;
-    padding-right: 0.6rem;
-    padding-top: 0.5rem;
-    font-weight: 500;
+  .caret::after {
+    content: "";
+    display: inline-block;
+    width: 0.55em;
+    height: 1.1em;
+    margin-left: 0.15em;
+    background-color: currentColor;
+    vertical-align: -0.15em;
+    animation: blink 1.05s steps(1) infinite;
   }
 
-  .pull-quote {
-    @apply font-display italic text-2xl md:text-3xl leading-snug text-ink dark:text-slate-100 text-balance;
-    letter-spacing: -0.01em;
-  }
-
-  .smallcaps {
-    font-variant-caps: all-small-caps;
-    letter-spacing: 0.08em;
-  }
-
-  .badge {
-    @apply inline-flex items-center rounded-full border border-ink/10 bg-white px-3 py-1 text-xs font-medium text-ink-soft
-      dark:bg-white/[0.04] dark:border-white/10 dark:text-slate-300;
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
   }
 
   .link-underline {
@@ -97,16 +110,6 @@ html.dark body {
     background-size: 100% 1px;
     background-repeat: no-repeat;
     background-position: 0 100%;
-  }
-
-  .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-gold-dark
-      dark:bg-gold-light dark:text-slate-900 dark:hover:bg-white;
-  }
-
-  .btn-outline {
-    @apply inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-gold hover:text-gold-dark
-      dark:bg-transparent dark:border-white/15 dark:text-slate-100 dark:hover:border-gold-light dark:hover:text-gold-light;
   }
 
   .surface-alt {
@@ -123,19 +126,13 @@ html.dark body {
     text-wrap: balance;
   }
   .display-huge {
-    font-size: clamp(3rem, 10vw, 8.5rem);
-    line-height: 0.9;
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 0.95;
     letter-spacing: -0.04em;
-  }
-  .ornament::before {
-    content: "❦";
-    display: inline-block;
-    margin: 0 0.6em;
-    color: rgb(166 127 61);
-    font-size: 0.85em;
   }
 }
 
 section[id] {
   scroll-margin-top: 5rem;
 }
+

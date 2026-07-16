@@ -8,39 +8,39 @@ export default function Education() {
   return (
     <section id="education" className="section surface-alt">
       <div className="container-page">
-        <div className="rule-double" aria-hidden />
-        <div className="flex items-baseline gap-6 py-4">
-          <span className="section-number">III</span>
-          <span className="eyebrow smallcaps">{t.education.kicker}</span>
-        </div>
-        <div className="rule" aria-hidden />
+        <SectionHead cmd="cat education.log" kicker={t.education.kicker} />
 
-        <div className="mt-16 grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
+        <div className="mt-12 grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
           <div />
           <div>
             <h2 className="section-title">{t.education.title}</h2>
 
-            <ul className="mt-14 divide-y divide-ink/[0.12] dark:divide-white/[0.12]">
-              {t.education.items.map((ed) => (
+            <ul className="mt-10 space-y-0">
+              {t.education.items.map((ed, i) => (
                 <li
                   key={ed.degree + ed.period}
-                  className="grid md:grid-cols-[140px_1fr] gap-3 md:gap-10 py-8"
+                  className="grid md:grid-cols-[160px_1fr] gap-3 md:gap-10 py-8 border-t border-dashed border-ink/[0.18] first:border-t-0 first:pt-0 dark:border-white/[0.18]"
                 >
-                  <p className="text-sm font-medium text-ink dark:text-slate-200 md:pt-1">
-                    {ed.period}
-                  </p>
+                  <div className="md:pt-1">
+                    <p className="mono text-xs text-ink-muted dark:text-slate-500">
+                      [{String(i + 1).padStart(2, "0")}]
+                    </p>
+                    <p className="mt-2 mono text-sm text-ink dark:text-slate-100">
+                      {ed.period}
+                    </p>
+                  </div>
                   <div>
                     <h3 className="font-display text-xl md:text-2xl font-normal tracking-tight text-ink text-balance dark:text-slate-100">
                       {ed.degree}
                     </h3>
-                    <p className="mt-1.5 text-sm text-ink-muted dark:text-slate-400">
+                    <p className="mt-1.5 mono text-sm text-ink-muted dark:text-slate-400">
                       <span className="text-ink dark:text-slate-200">
                         {ed.school}
                       </span>
-                      <span className="mx-2 text-ink-subtle dark:text-slate-600">
-                        —
+                      <span className="text-gold-dark/70 dark:text-gold-light/70">
+                        {" @ "}
                       </span>
-                      <span className="italic">{ed.location}</span>
+                      {ed.location}
                     </p>
                     {ed.description && (
                       <p className="mt-3 text-ink-soft dark:text-slate-300 max-w-2xl">
@@ -58,4 +58,12 @@ export default function Education() {
   );
 }
 
-
+function SectionHead({ cmd, kicker }: { cmd: string; kicker: string }) {
+  return (
+    <div>
+      <p className="prompt text-ink-soft dark:text-slate-300">{cmd}</p>
+      <p className="cmt mt-1 text-xs">{kicker}</p>
+      <div className="mt-4 rule-dashed" aria-hidden />
+    </div>
+  );
+}

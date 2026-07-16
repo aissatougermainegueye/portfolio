@@ -3,7 +3,7 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
-  title: "Aïssatou Gueye — Ingénieure Informatique",
+  title: "Aïssatou Gueye - Ingénieure Informatique",
   description:
     "Portfolio d'Aïssatou Gueye, ingénieure informatique diplômée de Sup Galilée. À la recherche d'un CDI à partir d'octobre 2026.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Aïssatou Gueye" }],
   openGraph: {
-    title: "Aïssatou Gueye — Ingénieure Informatique",
+    title: "Aïssatou Gueye - Ingénieure Informatique",
     description:
       "Portfolio d'Aïssatou Gueye, ingénieure informatique.",
     locale: "fr_FR",

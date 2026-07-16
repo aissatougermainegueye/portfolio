@@ -11,14 +11,9 @@ export default function Experience() {
   return (
     <section id="experience" className="section surface-base">
       <div className="container-page">
-        <div className="rule-double" aria-hidden />
-        <div className="flex items-baseline gap-6 py-4">
-          <span className="section-number">II</span>
-          <span className="eyebrow smallcaps">{t.experience.kicker}</span>
-        </div>
-        <div className="rule" aria-hidden />
+        <SectionHead cmd="ls -la ./experience" kicker={t.experience.kicker} />
 
-        <div className="mt-16 grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
+        <div className="mt-12 grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
           <div />
           <div>
             <h2 className="section-title">{t.experience.title}</h2>
@@ -26,22 +21,22 @@ export default function Experience() {
               <p className="section-lead">{t.experience.lead}</p>
             )}
 
-            <ol className="mt-16 divide-y divide-ink/[0.12] dark:divide-white/[0.12]">
+            <ol className="mt-12 space-y-0">
               {t.experience.items.map((exp, i) => (
                 <li
                   key={exp.company + exp.period}
-                  className="grid md:grid-cols-[140px_1fr] gap-4 md:gap-10 py-12 first:pt-0"
+                  className="grid md:grid-cols-[160px_1fr] gap-4 md:gap-10 py-10 border-t border-dashed border-ink/[0.18] first:border-t-0 first:pt-0 dark:border-white/[0.18]"
                 >
-                  <div className="md:pt-2">
-                    <p className="font-display italic text-ink-muted text-lg dark:text-slate-400">
-                      N°0{i + 1}
+                  <div className="md:pt-1">
+                    <p className="mono text-xs text-ink-muted dark:text-slate-500">
+                      [{String(i + 1).padStart(2, "0")}]
                     </p>
-                    <p className="mt-2 text-sm font-medium text-ink dark:text-slate-200">
+                    <p className="mt-2 mono text-sm text-ink dark:text-slate-100">
                       {exp.period}
                     </p>
                     {exp.current && (
-                      <span className="mt-2 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-400 smallcaps">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                      <span className="mt-3 inline-flex items-center gap-2 mono text-[11px] text-emerald-700 dark:text-emerald-400">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                         {t.experience.current_badge}
                       </span>
                     )}
@@ -54,12 +49,12 @@ export default function Experience() {
                         fit={exp.logoFit}
                         company={exp.company}
                       />
-                      <p className="text-sm text-ink-muted dark:text-slate-400">
-                        <span className="font-medium text-ink dark:text-slate-100">
+                      <p className="mono text-sm text-ink-muted dark:text-slate-400">
+                        <span className="text-ink dark:text-slate-100">
                           {exp.company}
                         </span>
-                        <span className="mx-2 text-ink-subtle dark:text-slate-600">
-                          —
+                        <span className="text-gold-dark/70 dark:text-gold-light/70">
+                          {" @ "}
                         </span>
                         {exp.location}
                       </p>
@@ -75,17 +70,25 @@ export default function Experience() {
                       </p>
                     )}
 
-                    <ul className="mt-4 space-y-2 text-ink-soft dark:text-slate-300 max-w-2xl">
-                      {exp.highlights.map((h, i) => (
-                        <li key={i} className="flex gap-3">
-                          <span className="mt-3 h-px w-3 bg-ink/40 shrink-0 dark:bg-white/40" />
-                          <span>{h}</span>
-                        </li>
-                      ))}
+                    <ul className="mt-5 space-y-1.5 max-w-2xl">
+                      {exp.highlights.map((h, j) => {
+                        const last = j === exp.highlights.length - 1;
+                        return (
+                          <li key={j} className="flex gap-3 text-ink-soft dark:text-slate-300">
+                            <span className="mono text-ink-muted dark:text-slate-500 shrink-0">
+                              {last ? "└──" : "├──"}
+                            </span>
+                            <span>{h}</span>
+                          </li>
+                        );
+                      })}
                     </ul>
 
                     {exp.stack && exp.stack.length > 0 && (
-                      <p className="mt-6 text-xs uppercase tracking-[0.18em] text-ink-muted dark:text-slate-500 smallcaps">
+                      <p className="mt-6 mono text-xs text-ink-muted dark:text-slate-500">
+                        <span className="text-gold-dark/70 dark:text-gold-light/70">
+                          $ stack:{" "}
+                        </span>
                         {exp.stack.join(" · ")}
                       </p>
                     )}
@@ -97,6 +100,16 @@ export default function Experience() {
         </div>
       </div>
     </section>
+  );
+}
+
+function SectionHead({ cmd, kicker }: { cmd: string; kicker: string }) {
+  return (
+    <div>
+      <p className="prompt text-ink-soft dark:text-slate-300">{cmd}</p>
+      <p className="cmt mt-1 text-xs">{kicker}</p>
+      <div className="mt-4 rule-dashed" aria-hidden />
+    </div>
   );
 }
 
@@ -122,7 +135,7 @@ function CompanyLogo({
   const imgClass = fit === "cover" ? "object-cover" : "object-contain p-0.5";
 
   return (
-    <div className="relative h-8 w-8 rounded-md overflow-hidden border border-ink/[0.08] bg-white shrink-0 dark:border-white/[0.08] dark:bg-white/95">
+    <div className="relative h-8 w-8 overflow-hidden border border-ink/[0.15] bg-white shrink-0 dark:border-white/[0.15] dark:bg-white/95">
       {showImage ? (
         <Image
           src={withBase(src!)}
@@ -133,12 +146,10 @@ function CompanyLogo({
           onError={() => setFailed(true)}
         />
       ) : (
-        <span className="absolute inset-0 grid place-items-center font-display text-[10px] font-semibold text-ink">
+        <span className="absolute inset-0 grid place-items-center mono text-[10px] font-semibold text-ink">
           {initials}
         </span>
       )}
     </div>
   );
 }
-
-

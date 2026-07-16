@@ -112,7 +112,7 @@ export type Dict = {
 const fr: Dict = {
   htmlLang: "fr",
   meta: {
-    title: "Aïssatou GUEYE — Ingénieure Informatique",
+    title: "Aïssatou GUEYE - Ingénieure Informatique",
     description:
       "Portfolio d'Aïssatou GUEYE, ingénieure informatique. À la recherche d'un CDI à partir d'octobre 2026.",
   },
@@ -213,7 +213,7 @@ const fr: Dict = {
         company: "Covéa",
         logo: "/covea.png",
         location: "Paris Montparnasse",
-        period: "Août 2023 — Août 2025",
+        period: "Août 2023 - Août 2025",
         description:
           "Analyse métier et développement fullstack.",
         highlights: [
@@ -237,7 +237,7 @@ const fr: Dict = {
         logo: "/MMA.png",
         logoFit: "cover",
         location: "Chartres",
-        period: "Octobre 2022 — Juillet 2023",
+        period: "Octobre 2022 - Juillet 2023",
         description:
           "Industrialisation et développement autour des CMS JCMS et Jahia pour les sites de la marque.",
         highlights: [
@@ -265,7 +265,7 @@ const fr: Dict = {
         logo: "/ravess.png",
         logoFit: "cover",
         location: "Région parisienne",
-        period: "Juillet 2022 — Septembre 2022",
+        period: "Juillet 2022 - Septembre 2022",
         description:
           "Mission de street marketing pour le compte de l'UNICEF.",
         highlights: [
@@ -289,7 +289,7 @@ const fr: Dict = {
         degree: "Diplôme d'Ingénieur en Informatique",
         school: "Sup Galilée",
         location: "Villetaneuse",
-        period: "Septembre 2022 — Juillet 2026",
+        period: "Septembre 2022 - Juillet 2026",
         description:
           "Formation généraliste d'ingénieur en Informatique : Développement, Data/IA, Réseaux, Cloud, Gestion de projet.",
       },
@@ -297,7 +297,7 @@ const fr: Dict = {
         degree: "Séjour linguistique",
         school: "ACE English Malta",
         location: "Malte",
-        period: "Juin 2025 — Août 2025",
+        period: "Juin 2025 - Août 2025",
         description:
           "Mobilité internationale : cours d'anglais conversationnels.",
       },
@@ -305,15 +305,15 @@ const fr: Dict = {
         degree: "Classes Préparatoires aux Grandes Écoles",
         school: "Lycée Marceau",
         location: "Chartres",
-        period: "Septembre 2020 — Août 2022",
+        period: "Septembre 2020 - Août 2022",
         description:
           "Maths, Physique, Chimie, Informatique & Science de l'Ingénieur.",
       },
       {
-        degree: "Baccalauréat Scientifique — Mention Bien",
+        degree: "Baccalauréat Scientifique - Mention Bien",
         school: "Lycée Scientifique d'Excellence de Diourbel",
         location: "Diourbel, Sénégal",
-        period: "Octobre 2017 — Septembre 2020",
+        period: "Octobre 2017 - Septembre 2020",
         description: "Option Sciences Expérimentales.",
       },
     ],
@@ -467,7 +467,7 @@ const en: Dict = {
         company: "Covéa",
         logo: "/covea.png",
         location: "Paris",
-        period: "Aug. 2023 — Aug. 2025",
+        period: "Aug. 2023 - Aug. 2025",
         description:
           "Business analysis and fullstack development.",
         highlights: [
@@ -491,7 +491,7 @@ const en: Dict = {
         logo: "/MMA.png",
         logoFit: "cover",
         location: "Chartres",
-        period: "Oct. 2022 — Jul. 2023",
+        period: "Oct. 2022 - Jul. 2023",
         description:
           "Industrialization and development around JCMS and Jahia CMS platforms for the brand's websites.",
         highlights: [
@@ -507,7 +507,7 @@ const en: Dict = {
         logo: "/ravess.png",
         logoFit: "cover",
         location: "Greater Paris",
-        period: "Jul. 2022 — Sep. 2022",
+        period: "Jul. 2022 - Sep. 2022",
         description:
           "Street marketing mission on behalf of UNICEF.",
         highlights: [
@@ -531,7 +531,7 @@ const en: Dict = {
         degree: "Engineering degree - Computer Science Engineering",
         school: "Sup Galilée",
         location: "Villetaneuse",
-        period: "Sep. 2022 — Jul. 2026",
+        period: "Sep. 2022 - Jul. 2026",
         description:
           "General computer science engineering curriculum: development, data/AI, networks, cloud, project management.",
       },
@@ -539,22 +539,22 @@ const en: Dict = {
         degree: "Language stay",
         school: "ACE English Malta",
         location: "Malta",
-        period: "Jun. 2025 — Aug. 2025",
+        period: "Jun. 2025 - Aug. 2025",
         description: "International mobility: conversational English classes.",
       },
       {
         degree: "Preparatory classes for Grandes Écoles",
         school: "Lycée Marceau",
         location: "Chartres",
-        period: "Sep. 2020 — Aug. 2022",
+        period: "Sep. 2020 - Aug. 2022",
         description:
           "Math, Physics, Chemistry, Computer Science & Engineering Sciences.",
       },
       {
-        degree: "Scientific Baccalauréat — Honors",
+        degree: "Scientific Baccalauréat - Honors",
         school: "Lycée Scientifique d'Excellence de Diourbel",
         location: "Diourbel, Senegal",
-        period: "Oct. 2017 — Sep. 2020",
+        period: "Oct. 2017 - Sep. 2020",
         description: "Experimental Sciences track.",
       },
     ],

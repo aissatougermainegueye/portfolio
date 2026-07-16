@@ -132,21 +132,21 @@ function CompanyLogo({
     .toUpperCase();
 
   const showImage = src && !failed;
-  const imgClass = fit === "cover" ? "object-cover" : "object-contain p-0.5";
+  const imgClass = fit === "cover" ? "object-cover" : "object-contain p-1";
 
   return (
-    <div className="relative h-8 w-8 overflow-hidden border border-ink/[0.15] bg-white shrink-0 dark:border-white/[0.15] dark:bg-white/95">
+    <div className="relative h-14 w-14 overflow-hidden border border-ink/[0.15] bg-white shrink-0 dark:border-white/[0.15] dark:bg-white/95">
       {showImage ? (
         <Image
           src={withBase(src!)}
           alt={`${company} logo`}
           fill
-          sizes="32px"
+          sizes="56px"
           className={imgClass}
           onError={() => setFailed(true)}
         />
       ) : (
-        <span className="absolute inset-0 grid place-items-center mono text-[10px] font-semibold text-ink">
+        <span className="absolute inset-0 grid place-items-center mono text-sm font-semibold text-ink">
           {initials}
         </span>
       )}

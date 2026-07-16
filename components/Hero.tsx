@@ -52,12 +52,12 @@ export default function Hero() {
 
           <div className="relative w-full max-w-xs lg:max-w-none justify-self-end">
             <div className="mono text-[11px] text-ink-muted dark:text-slate-500 mb-2 flex items-center justify-between">
-              <span>./photo.jpeg</span>
+              <span>./photo.jpg</span>
               <span>4:5</span>
             </div>
             <div className="relative aspect-[4/5] overflow-hidden border border-ink/[0.15] dark:border-white/[0.15]">
               <Image
-                src={withBase("/photo.jpeg")}
+                src={withBase("/photo.jpg")}
                 alt={`${t.common.firstName} ${t.common.lastName}`}
                 fill
                 priority

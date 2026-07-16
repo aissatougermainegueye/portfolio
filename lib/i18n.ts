@@ -137,7 +137,7 @@ const fr: Dict = {
     kicker: "Portfolio · 2026",
     title_role: "Ingénieure Informatique",
     tagline:
-      "Diplômée en ingénierie informatique, actuellement en stage chez TechnipFMC. Je conçois des logiciels métier robustes, à la croisée du produit et de l'ingénierie.",
+      "En fin d'études d'ingénierie informatique, actuellement en stage chez TechnipFMC. Je conçois des logiciels métier robustes, à la croisée du produit et de l'ingénierie.",
     badge_available: "Disponible en CDI dès octobre 2026",
     cta_contact: "Me contacter",
     cta_journey: "Voir le parcours",
@@ -391,7 +391,7 @@ const en: Dict = {
     kicker: "Portfolio · 2026",
     title_role: "Computer Science Engineer",
     tagline:
-      "Computer Science graduate, completing my internship at TechnipFMC. I build robust business software at the crossroads of product and engineering.",
+      "Final-year Computer Science engineering student, currently interning at TechnipFMC. I build robust business software at the crossroads of product and engineering.",
     badge_available: "Available full-time from October 2026",
     cta_contact: "Get in touch",
     cta_journey: "See the journey",

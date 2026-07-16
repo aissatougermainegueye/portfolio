@@ -9,30 +9,38 @@ export default function Experience() {
   const { t } = useApp();
 
   return (
-    <section id="experience" className="section surface-alt">
+    <section id="experience" className="section surface-base">
       <div className="container-page">
-        <div className="grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
-          <div className="md:pt-2">
-            <span className="eyebrow">{t.experience.kicker}</span>
-          </div>
+        <div className="rule-double" aria-hidden />
+        <div className="flex items-baseline gap-6 py-4">
+          <span className="section-number">II</span>
+          <span className="eyebrow smallcaps">{t.experience.kicker}</span>
+        </div>
+        <div className="rule" aria-hidden />
+
+        <div className="mt-16 grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
+          <div />
           <div>
             <h2 className="section-title">{t.experience.title}</h2>
             {t.experience.lead && (
               <p className="section-lead">{t.experience.lead}</p>
             )}
 
-            <ol className="mt-16 space-y-16">
-              {t.experience.items.map((exp) => (
+            <ol className="mt-16 divide-y divide-ink/[0.12] dark:divide-white/[0.12]">
+              {t.experience.items.map((exp, i) => (
                 <li
                   key={exp.company + exp.period}
-                  className="grid md:grid-cols-[140px_1fr] gap-4 md:gap-10"
+                  className="grid md:grid-cols-[140px_1fr] gap-4 md:gap-10 py-12 first:pt-0"
                 >
                   <div className="md:pt-2">
-                    <p className="text-sm font-medium text-ink dark:text-slate-200">
+                    <p className="font-display italic text-ink-muted text-lg dark:text-slate-400">
+                      N°0{i + 1}
+                    </p>
+                    <p className="mt-2 text-sm font-medium text-ink dark:text-slate-200">
                       {exp.period}
                     </p>
                     {exp.current && (
-                      <span className="mt-2 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-400">
+                      <span className="mt-2 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-400 smallcaps">
                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                         {t.experience.current_badge}
                       </span>
@@ -62,7 +70,7 @@ export default function Experience() {
                     </h3>
 
                     {exp.description && (
-                      <p className="mt-4 text-ink-soft dark:text-slate-300 max-w-2xl">
+                      <p className="mt-4 text-ink-soft dark:text-slate-300 max-w-2xl italic">
                         {exp.description}
                       </p>
                     )}
@@ -70,14 +78,14 @@ export default function Experience() {
                     <ul className="mt-4 space-y-2 text-ink-soft dark:text-slate-300 max-w-2xl">
                       {exp.highlights.map((h, i) => (
                         <li key={i} className="flex gap-3">
-                          <span className="mt-3 h-px w-3 bg-ink/30 shrink-0 dark:bg-white/30" />
+                          <span className="mt-3 h-px w-3 bg-ink/40 shrink-0 dark:bg-white/40" />
                           <span>{h}</span>
                         </li>
                       ))}
                     </ul>
 
                     {exp.stack && exp.stack.length > 0 && (
-                      <p className="mt-5 text-xs text-ink-muted dark:text-slate-500">
+                      <p className="mt-6 text-xs uppercase tracking-[0.18em] text-ink-muted dark:text-slate-500 smallcaps">
                         {exp.stack.join(" · ")}
                       </p>
                     )}
@@ -132,4 +140,5 @@ function CompanyLogo({
     </div>
   );
 }
+
 

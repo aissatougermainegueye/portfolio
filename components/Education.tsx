@@ -6,16 +6,21 @@ export default function Education() {
   const { t } = useApp();
 
   return (
-    <section id="education" className="section surface-base">
+    <section id="education" className="section surface-alt">
       <div className="container-page">
-        <div className="grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
-          <div className="md:pt-2">
-            <span className="eyebrow">{t.education.kicker}</span>
-          </div>
+        <div className="rule-double" aria-hidden />
+        <div className="flex items-baseline gap-6 py-4">
+          <span className="section-number">III</span>
+          <span className="eyebrow smallcaps">{t.education.kicker}</span>
+        </div>
+        <div className="rule" aria-hidden />
+
+        <div className="mt-16 grid md:grid-cols-[1fr_3fr] gap-8 md:gap-16">
+          <div />
           <div>
             <h2 className="section-title">{t.education.title}</h2>
 
-            <ul className="mt-14 divide-y divide-ink/[0.08] dark:divide-white/[0.08]">
+            <ul className="mt-14 divide-y divide-ink/[0.12] dark:divide-white/[0.12]">
               {t.education.items.map((ed) => (
                 <li
                   key={ed.degree + ed.period}
@@ -35,7 +40,7 @@ export default function Education() {
                       <span className="mx-2 text-ink-subtle dark:text-slate-600">
                         —
                       </span>
-                      {ed.location}
+                      <span className="italic">{ed.location}</span>
                     </p>
                     {ed.description && (
                       <p className="mt-3 text-ink-soft dark:text-slate-300 max-w-2xl">
@@ -52,4 +57,5 @@ export default function Education() {
     </section>
   );
 }
+
 

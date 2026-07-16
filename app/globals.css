@@ -30,7 +30,7 @@ html.dark body {
   }
 
   .eyebrow {
-    @apply inline-block text-[11px] font-medium uppercase tracking-[0.18em] text-ink-muted dark:text-slate-400;
+    @apply inline-block text-[11px] font-medium uppercase tracking-[0.22em] text-ink-muted dark:text-slate-400;
   }
 
   .section-title {
@@ -42,8 +42,47 @@ html.dark body {
     @apply mt-6 max-w-2xl text-ink-muted text-base md:text-lg dark:text-slate-400;
   }
 
+  .section-number {
+    @apply font-display text-[5rem] md:text-[7rem] leading-none italic font-normal text-ink/[0.08] dark:text-white/[0.08] select-none;
+    letter-spacing: -0.04em;
+  }
+
   .rule {
-    @apply block h-px w-full bg-ink/[0.08] dark:bg-white/[0.08];
+    @apply block h-px w-full bg-ink/[0.12] dark:bg-white/[0.12];
+  }
+
+  .rule-double {
+    @apply relative w-full;
+    height: 5px;
+    background-image: linear-gradient(currentColor, currentColor),
+      linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px, 100% 1px;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    color: rgb(15 23 42 / 0.35);
+  }
+
+  .dark .rule-double {
+    color: rgb(255 255 255 / 0.3);
+  }
+
+  .dropcap::first-letter {
+    @apply font-display float-left italic text-gold-dark dark:text-gold-light;
+    font-size: 4.5rem;
+    line-height: 0.9;
+    padding-right: 0.6rem;
+    padding-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  .pull-quote {
+    @apply font-display italic text-2xl md:text-3xl leading-snug text-ink dark:text-slate-100 text-balance;
+    letter-spacing: -0.01em;
+  }
+
+  .smallcaps {
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.08em;
   }
 
   .badge {
@@ -84,9 +123,16 @@ html.dark body {
     text-wrap: balance;
   }
   .display-huge {
-    font-size: clamp(3rem, 10vw, 7.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.035em;
+    font-size: clamp(3rem, 10vw, 8.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+  }
+  .ornament::before {
+    content: "❦";
+    display: inline-block;
+    margin: 0 0.6em;
+    color: rgb(166 127 61);
+    font-size: 0.85em;
   }
 }
 

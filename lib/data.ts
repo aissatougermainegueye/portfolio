@@ -2,7 +2,6 @@ export const contactInfo = {
   email: "aissatou.germaine.gueye@gmail.com",
   phone: "06 05 98 03 73",
   linkedin: "https://www.linkedin.com/",
-  github: "https://github.com/",
 };
 
 export const techStack = {

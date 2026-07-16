@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, ArrowUpRight } from "lucide-react";
 import { contactInfo } from "@/lib/data";
 import { useApp } from "./Providers";
 
@@ -70,13 +70,6 @@ export default function Contact() {
                 icon={<MapPin className="h-4 w-4" />}
                 label={t.contact.row_location}
                 value={t.common.location}
-              />
-              <ContactRow
-                href={contactInfo.github}
-                external
-                icon={<Github className="h-4 w-4" />}
-                label={t.contact.row_github}
-                value={t.contact.row_github_value}
               />
             </ul>
           </div>

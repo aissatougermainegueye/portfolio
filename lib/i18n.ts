@@ -98,8 +98,6 @@ export type Dict = {
     row_email: string;
     row_phone: string;
     row_location: string;
-    row_github: string;
-    row_github_value: string;
   };
   footer: {
     role: string;
@@ -211,15 +209,15 @@ const fr: Dict = {
         ],
       },
       {
-        role: "Apprentie Ingénieure SI - Chef de projet & Dev",
+        role: "Apprentie Ingénieure SI - BA & Dev",
         company: "Covéa",
         logo: "/covea.png",
         location: "Paris Montparnasse",
         period: "Août 2023 — Août 2025",
         description:
-          "Gestion de projet et développement fullstack.",
+          "Analyse métier et développement fullstack.",
         highlights: [
-          "Analyse des besoins métiers, communication et reporting auprès des équipes techniques et fonctionnelles",
+          "Analyse des besoins métiers, communication, collecte et documentation des exigences, et reporting auprès des équipes techniques et fonctionnelles",
           "Conception et développement d'un outil interne de comparaison des configurations Genesys (téléphonie) sur les environnements Dev, Homol, Preprod et Prod",
           "Backend Java (Spring Boot) et frontend React / JavaScript",
           "Intégration applicative, conception et gestion des pipelines CI/CD, gestion de version avec Git (Bitbucket) et participation aux opérations DevOps.",
@@ -244,7 +242,7 @@ const fr: Dict = {
           "Industrialisation et développement autour des CMS JCMS et Jahia pour les sites de la marque.",
         highlights: [
           "Gestion de contenus sur plateformes CMS (JCMS et Jahia), déploiement des versions 9 et 10 de JCMS avec Ruby/Chef, Ansible et Jenkins, gestion des logs via ELK/KAFKA",
-          "Développement d'un outil interne de téléchargement des modules Jahia (sources et artefacts) — utilisé pour les livraisons éditeur et les audits",
+          "Développement d'un outil interne de téléchargement des modules Jahia (sources et artefacts) - utilisé pour les livraisons éditeur et les audits",
           "Développement de modules Jahia dédiés à la gestion des imports et exports de sites",
         ],
         stack: [
@@ -354,8 +352,6 @@ const fr: Dict = {
     row_email: "Email",
     row_phone: "Téléphone",
     row_location: "Localisation",
-    row_github: "GitHub",
-    row_github_value: "Voir mes projets",
   },
   footer: {
     role: "Ingénieure Informatique",
@@ -467,15 +463,15 @@ const en: Dict = {
         ],
       },
       {
-        role: "IS Engineer Apprentice - PM & Dev",
+        role: "IS Engineer Apprentice - BA & Dev",
         company: "Covéa",
         logo: "/covea.png",
-        location: "Paris Montparnasse",
+        location: "Paris",
         period: "Aug. 2023 — Aug. 2025",
         description:
-          "Project management and fullstack development.",
+          "Business analysis and fullstack development.",
         highlights: [
-          "Business analysis, communication and reporting with technical and functional teams",
+          "Business analysis, communication and reporting with technical and functional teams, including requirement gathering and documentation",
           "Design and development of an internal tool comparing Genesys (telephony) configurations across Dev, Test, Preprod and Prod environments",
           "Java (Spring Boot) backend and React / JavaScript frontend",
           "Application integration, design and management of CI/CD pipelines, version control with Git (Bitbucket), and involvement in DevOps operations."
@@ -500,7 +496,7 @@ const en: Dict = {
           "Industrialization and development around JCMS and Jahia CMS platforms for the brand's websites.",
         highlights: [
           "Content management using CMS platforms (JCMS and Jahia), deployment of JCMS versions 9 and 10  with Ruby/Chef, Ansible, Jenkins and ELK/KAFKA for logs management",
-          "Development of an internal tool to download Jahia modules (sources and artifacts) — used for vendor deliveries and audits",
+          "Development of an internal tool to download Jahia modules (sources and artifacts) - used for vendor deliveries and audits",
           "Development of Jahia modules dedicated to site import/export management",
         ],
         stack: ["Java", "JCMS", "Jahia", "Maven", "Git", "Ruby", "Chef", "Ansible", "Jenkins", "ELK", "KAFKA"],
@@ -597,8 +593,6 @@ const en: Dict = {
     row_email: "Email",
     row_phone: "Phone",
     row_location: "Location",
-    row_github: "GitHub",
-    row_github_value: "See my projects",
   },
   footer: {
     role: "Software Engineer",

@@ -1,7 +1,7 @@
 export const contactInfo = {
   email: "aissatou.germaine.gueye@gmail.com",
   phone: "06 05 98 03 73",
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/aïssatougueye/",
 };
 
 export const techStack = {

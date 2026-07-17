@@ -19,7 +19,7 @@ export default function Hero() {
               whoami
             </p>
             <p className="cmt mt-1 text-xs">
-              {t.common.location} · {t.hero.badge_available}
+              {t.common.location}
             </p>
 
             <h1 className="mt-8 font-display display-huge text-ink dark:text-slate-50 text-balance">

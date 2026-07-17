@@ -114,7 +114,7 @@ const fr: Dict = {
   meta: {
     title: "Aïssatou GUEYE - Ingénieure Informatique",
     description:
-      "Portfolio d'Aïssatou GUEYE, ingénieure informatique. À la recherche d'un CDI à partir d'octobre 2026.",
+      "Portfolio d'Aïssatou GUEYE, ingénieure informatique.",
   },
   common: {
     location: "Nîmes, France",
@@ -138,7 +138,7 @@ const fr: Dict = {
     title_role: "Ingénieure Informatique",
     tagline:
       "En fin d'études d'ingénierie informatique, actuellement en stage chez TechnipFMC. Je conçois des logiciels métier robustes, à la croisée du produit et de l'ingénierie.",
-    badge_available: "Disponible en CDI dès octobre 2026",
+    badge_available: "",
     cta_contact: "Me contacter",
     cta_journey: "Voir le parcours",
   },
@@ -346,7 +346,7 @@ const fr: Dict = {
     title_accent: "Prenons contact",
     title_post: ".",
     description:
-      "Ouverte aux opportunités d'ingénieure Informatique en CDI à partir d'octobre 2026.",
+      "Ouverte aux opportunités d'ingénieure Informatique.",
     cta_email: "Envoyer un email",
     cta_linkedin: "LinkedIn",
     row_email: "Email",
@@ -368,7 +368,7 @@ const en: Dict = {
   meta: {
     title: "Aïssatou GUEYE - Software Engineer",
     description:
-      "Portfolio of Aïssatou GUEYE, software engineer. Looking for a full-time position from October 2026.",
+      "Portfolio of Aïssatou GUEYE, software engineer.",
   },
   common: {
     location: "Nîmes, France",
@@ -392,7 +392,7 @@ const en: Dict = {
     title_role: "Computer Science Engineer",
     tagline:
       "Final-year Computer Science engineering student, currently interning at TechnipFMC. I build robust business software at the crossroads of product and engineering.",
-    badge_available: "Available full-time from October 2026",
+    badge_available: "",
     cta_contact: "Get in touch",
     cta_journey: "See the journey",
   },
@@ -587,7 +587,7 @@ const en: Dict = {
     title_accent: "Let's connect",
     title_post: ".",
     description:
-      "Open to full-time Computer Science Engineering opportunities from October 2026",
+      "Open to full-time Computer Science Engineering opportunities.",
     cta_email: "Send an email",
     cta_linkedin: "LinkedIn",
     row_email: "Email",

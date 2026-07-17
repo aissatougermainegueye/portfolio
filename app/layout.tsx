@@ -5,7 +5,7 @@ import Providers from "@/components/Providers";
 export const metadata: Metadata = {
   title: "Aïssatou Gueye - Ingénieure Informatique",
   description:
-    "Portfolio d'Aïssatou Gueye, ingénieure informatique diplômée de Sup Galilée. À la recherche d'un CDI à partir d'octobre 2026.",
+    "Portfolio d'Aïssatou Gueye, ingénieure informatique diplômée de Sup Galilée.",
   keywords: [
     "Aïssatou Gueye",
     "ingénieure informatique",
